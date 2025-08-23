@@ -1,17 +1,20 @@
-
-/* CSS Custom Properties for Theme Management */
 :root {
-    --background-color: #121212;
-    --surface-color: #1e1e1e;
-    --surface-variant: #2d2d2d;
-    --accent-color: #1e88e5;
-    --accent-hover: #1976d2;
-    --text-primary: #ffffff;
-    --text-secondary: #b3b3b3;
-    --text-muted: #888888;
-    --border-color: #333333;
-    --success-color: #4caf50;
-    --warning-color: #ff9800;
+    --ash-gray: #cad2c5ff;
+    --cambridge-blue: #84a98cff;
+    --hookers-green: #52796fff;
+    --dark-slate-gray: #354f52ff;
+    --charcoal: #2f3e46ff;
+    --background-color: var(--ash-gray);
+    --surface-color: var(--cambridge-blue);
+    --surface-variant: var(--ash-gray);
+    --accent-color: var(--hookers-green);
+    --accent-hover: var(--dark-slate-gray);
+    --text-primary: var(--charcoal);
+    --text-secondary: var(--dark-slate-gray);
+    --text-muted: var(--cambridge-blue);
+    --border-color: var(--dark-slate-gray);
+    --success-color: #009473;
+    --warning-color: #ffa500;
     
     /* Typography */
     --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
@@ -32,7 +35,6 @@
     --transition-slow: 0.6s ease;
 }
 
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -52,14 +54,12 @@ body {
     overflow-x: hidden;
 }
 
-/* Container and Layout */
 .container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 var(--spacing-md);
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
     line-height: 1.3;
@@ -86,7 +86,6 @@ a:hover {
     color: var(--accent-hover);
 }
 
-/* Section Styles */
 section {
     padding: var(--spacing-xxl) 0;
 }
@@ -118,7 +117,6 @@ section {
     margin-right: auto;
 }
 
-/* Hero Section */
 .hero-section {
     min-height: 100vh;
     display: flex;
@@ -201,7 +199,6 @@ section {
     text-align: center;
 }
 
-/* Summary Section */
 .summary-section {
     background-color: var(--surface-color);
 }
@@ -217,7 +214,6 @@ section {
     margin-bottom: var(--spacing-md);
 }
 
-/* Experience Section */
 .experience-timeline {
     max-width: 900px;
     margin: 0 auto;
@@ -234,7 +230,7 @@ section {
 
 .experience-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(30, 136, 229, 0.1);
+    box-shadow: 0 10px 30px rgba(82, 121, 111, 0.1);
 }
 
 .experience-header {
@@ -285,7 +281,6 @@ section {
     font-size: 0.8rem;
 }
 
-/* Skills Section */
 .skills-section {
     background-color: var(--surface-color);
 }
@@ -347,7 +342,7 @@ section {
 
 .skill-pill:hover {
     transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 5px 15px rgba(30, 136, 229, 0.3);
+    box-shadow: 0 5px 15px rgba(82, 121, 111, 0.3);
 }
 
 .skill-pill.primary:hover {
@@ -360,7 +355,6 @@ section {
     border-color: var(--accent-color);
 }
 
-/* Projects Section */
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -378,7 +372,7 @@ section {
 
 .project-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(30, 136, 229, 0.15);
+    box-shadow: 0 15px 40px rgba(82, 121, 111, 0.15);
     border-color: var(--accent-color);
 }
 
@@ -456,7 +450,6 @@ section {
     border: 1px solid var(--border-color);
 }
 
-/* Contact Section */
 .contact-section {
     background: var(--surface-color);
 }
@@ -524,10 +517,9 @@ section {
 .cta-button:hover {
     background: var(--accent-hover);
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(30, 136, 229, 0.3);
+    box-shadow: 0 10px 25px rgba(82, 121, 111, 0.3);
 }
 
-/* Footer */
 .site-footer {
     background: var(--background-color);
     padding: var(--spacing-lg) 0;
@@ -540,7 +532,6 @@ section {
     margin: 0;
 }
 
-/* Animation Classes */
 .fade-in {
     opacity: 0;
     transform: translateY(30px);
@@ -552,7 +543,6 @@ section {
     transform: translateY(0);
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
     :root {
         --spacing-xxl: 2rem;
@@ -645,7 +635,6 @@ section {
     }
 }
 
-/* High contrast mode support */
 @media (prefers-contrast: high) {
     :root {
         --background-color: #000000;
@@ -656,7 +645,6 @@ section {
     }
 }
 
-/* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
@@ -668,3 +656,4 @@ section {
         scroll-behavior: auto;
     }
 }
+
