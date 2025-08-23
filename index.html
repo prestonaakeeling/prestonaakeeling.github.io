@@ -4,7 +4,6 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Preston Keeling — Business Intelligence Leader</title>
-  <link rel="stylesheet" href="styles.css">
   <style>
     :root {
       --ink: #111827;
@@ -12,343 +11,246 @@
       --muted: #6b7280;
       --rule: #e5e7eb;
       --accent: #0ea5e9;
+      --bg-light: #f7fafc;
     }
-    html, body { height: 100%; }
-    body {
+    html, body {
       margin: 0;
+      padding: 0;
+      font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
       color: var(--ink);
-      font: 12pt/1.35 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      -webkit-font-smoothing: antialiased;
       background: #fff;
-      print-color-adjust: exact;
-      -webkit-print-color-adjust: exact;
+      line-height: 1.45;
     }
-    .sheet {
-      max-width: 920px;
-      margin: 0 auto;
-      padding: 0 18px 24px 18px;
-      box-sizing: border-box;
-    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    .container { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+
+    /* Hero Section */
     header.hero-section {
       background: #f6fafd;
-      padding: 0;
       border-bottom: 2px solid var(--rule);
-    }
-    .hero-content {
-      display: flex;
-      flex-direction: column;
-      gap: 8px;
       padding: 36px 0 26px 0;
     }
-    .hero-title {
-      font-size: 2.3rem;
-      font-weight: 800;
-      letter-spacing: .2px;
-      margin: 0;
-    }
-    .hero-subtitle {
-      font-size: 1rem;
-      color: var(--sub);
-      font-weight: 600;
-      margin: 0;
-    }
-    .hero-description {
-      max-width: 700px;
-      font-size: 1.0rem;
-      color: var(--ink);
-      margin: 7px 0 0 0;
-    }
-    .hero-contact {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-top: 6px;
-    }
+    .hero-title { font-size: 2.3rem; font-weight: 800; margin: 0; }
+    .hero-subtitle { font-size: 1rem; font-weight: 600; color: var(--sub); margin: 6px 0 12px 0; }
+    .hero-description { max-width: 700px; font-size: 1rem; margin: 0; color: var(--ink); }
+    .hero-contact { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 12px; }
     .cta-button {
       display: inline-block;
       background: var(--accent);
       color: #fff;
-      padding: 7.5px 18px;
+      padding: 8px 18px;
       border-radius: 999px;
-      font-size: 1rem;
-      text-decoration: none;
       font-weight: 600;
-      border: none;
+      font-size: 0.95rem;
       transition: background 0.2s;
     }
-    .cta-button:hover {
-      background: #0369a1;
-    }
+    .cta-button:hover { background: #0369a1; }
 
-    .container {
-      max-width: 870px;
-      margin: 0 auto;
-      padding: 0 8px;
-    }
-
-    main section {
-      margin: 24px 0 0 0;
-    }
+    /* Section Titles */
+    section { margin: 32px 0; }
     .section-title {
-      font-size: 1.13rem;
-      letter-spacing: .3px;
+      font-size: 1.15rem;
       text-transform: uppercase;
+      letter-spacing: 0.3px;
       color: var(--sub);
-      margin: 16px 0 8px 0;
+      margin-bottom: 12px;
       border-bottom: 1px solid var(--rule);
-      padding-bottom: 3px;
+      padding-bottom: 4px;
     }
-    p { margin: 0 0 8px; }
-    ul { margin: 7px 0 0 18px; padding: 0; }
-    li { margin: 4px 0; }
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(182px, 1fr));
-      gap: 15px 18px;
-      margin-top: 15px;
-    }
+
+    /* Metrics */
+    .metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; }
     .metric {
-      background: #f7fafc;
+      background: var(--bg-light);
       border: 1px solid var(--rule);
       border-radius: 12px;
-      padding: 18px 18px 11px 18px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 8px;
-      min-height: 50px;
+      padding: 16px;
+      text-align: left;
+      transition: box-shadow 0.2s;
     }
-    .metric-value {
-      font-size: 1.3rem;
-      font-weight: 800;
-      color: var(--accent);
-    }
-    .metric-label {
-      font-size: 0.99rem;
-      color: var(--sub);
-      font-weight: 500;
-    }
-    .experience-item { margin-bottom: 18px; }
-    .rolebar {
-      display: grid;
-      grid-template-columns: 1fr auto;
-      gap: 2px 8px;
-      align-items: baseline;
-      margin-bottom: 2px;
-    }
+    .metric:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .metric-value { font-size: 1.4rem; font-weight: 800; color: var(--accent); }
+    .metric-label { font-size: 0.95rem; color: var(--sub); margin-top: 4px; }
+
+    /* Experience */
+    .experience-item { margin-bottom: 20px; }
+    .rolebar { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px; flex-wrap: wrap; gap: 8px; }
     .position { font-weight: 700; }
-    .company { color: var(--sub); font-weight: 600; }
-    .duration, .meta { color: var(--muted); font-size: 10.8pt; }
-    .skills-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 8px;
-    }
-    .skill, .chip {
-      border: 1px solid var(--rule);
-      padding: 3px 12px;
-      border-radius: 999px;
-      font-size: 10.2pt;
-      background: #fafdff;
-      color: var(--ink);
-      font-weight: 500;
-    }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 16px;
-      margin-top: 8px;
-    }
+    .company { font-weight: 600; color: var(--sub); }
+    .duration, .meta { font-size: 0.95rem; color: var(--muted); }
+    ul { margin: 6px 0 0 18px; padding: 0; }
+    li { margin-bottom: 5px; line-height: 1.35; }
+
+    /* Skills */
+    .skills-grid { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 8px; }
+    .chip { border: 1px solid var(--rule); padding: 4px 12px; border-radius: 999px; font-size: 0.9rem; background: #fafdff; font-weight: 500; }
+
+    /* Projects */
+    .projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 8px; }
     .project-card {
-      background: #f7fafc;
+      background: var(--bg-light);
       border: 1px solid var(--rule);
       border-radius: 12px;
-      padding: 14px 17px;
-      min-height: 82px;
+      padding: 16px;
+      transition: box-shadow 0.2s;
     }
-    .contact-info {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 18px 32px;
-      margin-top: 8px;
-      font-size: 1.01rem;
-    }
-    .contact-info a {
-      color: var(--accent);
-      text-decoration: none;
-    }
-    .site-footer {
-      padding: 18px 0 12px 0;
-      border-top: 1px solid var(--rule);
-      color: var(--muted);
-      font-size: 10pt;
-      margin-top: 32px;
-    }
+    .project-card:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .project-card h3 { font-size: 1rem; margin-bottom: 4px; }
+    .project-card p { font-size: 0.92rem; color: var(--sub); margin: 0; }
+
+    /* Contact */
+    .contact-info { display: flex; flex-wrap: wrap; gap: 16px; font-size: 1rem; margin-top: 6px; }
+
+    /* Footer */
+    .site-footer { padding: 18px 0; border-top: 1px solid var(--rule); color: var(--muted); font-size: 0.9rem; margin-top: 32px; text-align: center; }
+
+    /* Responsive */
     @media (max-width: 600px) {
-      .sheet, .container { max-width: 100vw; width: 100vw; }
+      .hero-title { font-size: 1.8rem; }
+      .hero-subtitle { font-size: 0.95rem; }
+      .metrics-grid { grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); }
+      .projects-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
-  <header id="home" class="hero-section">
+  <header class="hero-section">
     <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">Preston Keeling</h1>
-        <h2 class="hero-subtitle">Business Intelligence Leader (Director/Manager)</h2>
-        <p class="hero-description">
-          BI Manager with 8+ years of experience delivering measurable business impact through analytics strategy, team leadership, and enterprise BI adoption. Proven record of driving revenue growth, cost savings, and operational improvements by aligning data with business goals. Skilled in building high-performing teams, leading cross-functional initiatives, and scaling BI solutions across 1,300+ users and 500 dashboards.
-        </p>
-        <div class="hero-contact">
-          <a href="mailto:Preston.aa.Keeling@Gmail.com" class="cta-button">📧 Preston.aa.Keeling@Gmail.com</a>
-          <a href="tel:+18016388101" class="cta-button">📱 (801) 638‑8101</a>
-          <a href="https://www.linkedin.com/in/prestonkeeling/" class="cta-button" target="_blank">💼 LinkedIn</a>
-        </div>
+      <h1 class="hero-title">Preston Keeling</h1>
+      <h2 class="hero-subtitle">Business Intelligence Leader (Director/Manager)</h2>
+      <p class="hero-description">
+        BI Manager with 8+ years of experience delivering measurable business impact through analytics strategy, team leadership, and enterprise BI adoption. Skilled in aligning data with business goals and scaling BI solutions across 1,300+ users and 500 dashboards.
+      </p>
+      <div class="hero-contact">
+        <a href="mailto:Preston.aa.Keeling@Gmail.com" class="cta-button">📧 Email</a>
+        <a href="tel:+18016388101" class="cta-button">📱 Call</a>
+        <a href="https://www.linkedin.com/in/prestonkeeling/" class="cta-button" target="_blank">💼 LinkedIn</a>
       </div>
     </div>
   </header>
 
-  <main class="sheet">
-    <section id="profile" class="summary-section">
-      <div class="container">
-        <h2 class="section-title">Profile</h2>
-        <p>
-          BI Manager with 8+ years of experience delivering measurable business impact through analytics strategy, team leadership, and enterprise BI adoption. Proven record of driving revenue growth, cost savings, and operational improvements by aligning data with business goals. Skilled in building high-performing teams, leading cross-functional initiatives, and scaling BI solutions across 1,300+ users and 500 dashboards.
-        </p>
+  <main class="container">
+    <!-- Metrics -->
+    <section>
+      <h2 class="section-title">Selected Impact Metrics</h2>
+      <div class="metrics-grid">
+        <div class="metric"><span class="metric-value">10%</span><span class="metric-label">Ops Performance ↑ (800+ Locations)</span></div>
+        <div class="metric"><span class="metric-value">9%</span><span class="metric-label">Category Sales ↑ YoY</span></div>
+        <div class="metric"><span class="metric-value">$275K</span><span class="metric-label">Annual Savings (BI Consolidation)</span></div>
+        <div class="metric"><span class="metric-value">$100K</span><span class="metric-label">Annual Savings (Bonus Automation)</span></div>
+        <div class="metric"><span class="metric-value">1,300+</span><span class="metric-label">BI Users Managed</span></div>
       </div>
     </section>
 
-    <section id="metrics" class="metrics-section">
-      <div class="container">
-        <h2 class="section-title">Selected Impact Metrics</h2>
-        <div class="metrics-grid">
-          <div class="metric"><span class="metric-value">10%</span><span class="metric-label">Improvement in Operations Performance (800+ Locations)</span></div>
-          <div class="metric"><span class="metric-value">9%</span><span class="metric-label">Increase in Category Sales (YoY)</span></div>
-          <div class="metric"><span class="metric-value">$275K</span><span class="metric-label">Annual Cost Savings (BI Tool Consolidation)</span></div>
-          <div class="metric"><span class="metric-value">$100K</span><span class="metric-label">Annual Savings (Bonus Program Automation)</span></div>
-          <div class="metric"><span class="metric-value">1,300+</span><span class="metric-label">Users Managed in BI Environment</span></div>
+    <!-- Experience -->
+    <section>
+      <h2 class="section-title">Professional Experience</h2>
+
+      <article class="experience-item">
+        <div class="rolebar">
+          <div><span class="position">Business Intelligence Manager</span> · <span class="company">Maverik</span></div>
+          <div class="duration">Salt Lake City, UT · Oct 2021 – Present</div>
+        </div>
+        <ul>
+          <li>Boosted operational performance 10% across 800+ locations with an “operations execution score.”</li>
+          <li>Increased category sales 9% YoY via production & waste dashboards.</li>
+          <li>Saved $275K/year by consolidating four legacy BI platforms; led change management for 100+ stores & 50+ corporate users.</li>
+          <li>Automated bonus program for 2,400 employees, saving $100K annually.</li>
+          <li>Managed enterprise BI environment: 1,300+ users, 500 dashboards.</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="rolebar">
+          <div><span class="position">Senior Financial Analyst</span> · <span class="company">Maverik</span></div>
+          <div class="duration">Salt Lake City, UT · Feb 2020 – Oct 2021</div>
+        </div>
+        <ul>
+          <li>Managed and developed junior analysts; trained staff in SQL, data modeling, and reporting best practices.</li>
+          <li>Designed KPI dashboards for 50+ leaders across Operations & Finance.</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="rolebar">
+          <div><span class="position">Financial Analyst I & II</span> · <span class="company">Maverik</span></div>
+          <div class="duration">Salt Lake City, UT · Sept 2017 – Feb 2020</div>
+        </div>
+        <ul>
+          <li>Built regression models to forecast $100M labor budget.</li>
+          <li>Automated recurring reporting, saving 20+ hours/month.</li>
+          <li>Introduced SQL views reducing reporting errors by 95%.</li>
+        </ul>
+      </article>
+
+      <article class="experience-item">
+        <div class="rolebar">
+          <div><span class="position">Junior Business Analyst</span> · <span class="company">Indus Valley Partners</span></div>
+          <div class="duration">Salt Lake City, UT · May 2016 – Sept 2017</div>
+        </div>
+        <ul>
+          <li>Gathered client requirements and developed enterprise databases supporting compliance and regulatory reporting.</li>
+        </ul>
+      </article>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="section-title">Core Leadership & Technical Skills</h2>
+      <div class="skills-grid">
+        <span class="chip">Leadership: BI Roadmaps</span>
+        <span class="chip">Leadership: Team Management</span>
+        <span class="chip">Leadership: Cross-Functional Collaboration</span>
+        <span class="chip">Leadership: KPI Design</span>
+        <span class="chip">Leadership: Forecasting</span>
+        <span class="chip">Leadership: Change Management</span>
+        <span class="chip">Technical: Looker (Advanced LookML)</span>
+        <span class="chip">Technical: SQL</span>
+        <span class="chip">Technical: ETL / Data Warehousing</span>
+        <span class="chip">Technical: Data Modeling</span>
+        <span class="chip">Technical: AI-driven Coding</span>
+        <span class="chip">Technical: Employee Training</span>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="section-title">Selected Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Operations Execution Score</h3>
+          <p>Holistic metric used at 800+ locations to improve operational performance by 10%.</p>
+        </div>
+        <div class="project-card">
+          <h3>Production & Waste Dashboards</h3>
+          <p>Category dashboards driving a 9% YoY increase in sales through labor and inventory optimization.</p>
+        </div>
+        <div class="project-card">
+          <h3>Bonus Program Automation</h3>
+          <p>Automated payouts for 2,400 employees, delivering $100K/year in cost savings.</p>
+        </div>
+        <div class="project-card">
+          <h3>BI Tool Consolidation</h3>
+          <p>Retired four legacy platforms, saved $275K/year, and increased adoption via centralized BI in Looker.</p>
         </div>
       </div>
     </section>
 
-    <section id="experience" class="experience-section">
-      <div class="container">
-        <h2 class="section-title">Professional Experience</h2>
-        <article class="experience-item">
-          <div class="rolebar">
-            <div>
-              <span class="position">Business Intelligence Manager</span> · <span class="company">Maverik</span>
-            </div>
-            <div class="duration">Salt Lake City, UT · Oct 2021 – Present</div>
-          </div>
-          <ul>
-            <li>Boosted operational performance 10% across 800+ locations by designing an “operations execution score” that simplified complex KPIs into actionable insights.</li>
-            <li>Increased category sales 9% YoY by implementing production and waste dashboards that improved labor and inventory efficiency.</li>
-            <li>Saved $275K annually by consolidating four legacy BI tools into a modern platform; led change management for 100+ stores and 50+ corporate users.</li>
-            <li>Reduced manual work and costs by automating the employee bonus program for 2,400 employees, saving $100K annually.</li>
-            <li>Managed enterprise BI environment with 1,300+ active users and 500 dashboards, providing executives with real-time financial, operational, and customer insights.</li>
-            <li>Built team cohesion and delivery speed by implementing SCRUM, creating dashboard/code quality standards, and mentoring analysts.</li>
-          </ul>
-        </article>
-        <article class="experience-item">
-          <div class="rolebar">
-            <div>
-              <span class="position">Senior Financial Analyst</span> · <span class="company">Maverik</span>
-            </div>
-            <div class="duration">Salt Lake City, UT · Feb 2020 – Oct 2021</div>
-          </div>
-          <ul>
-            <li>Managed and developed a team of junior analysts; trained staff in SQL, data modeling, and reporting best practices.</li>
-            <li>Designed KPI dashboards for 50+ leaders across Operations and Finance, improving visibility and accountability.</li>
-          </ul>
-        </article>
-        <article class="experience-item">
-          <div class="rolebar">
-            <div>
-              <span class="position">Financial Analyst I &amp; II</span> · <span class="company">Maverik</span>
-            </div>
-            <div class="duration">Salt Lake City, UT · Sept 2017 – Feb 2020</div>
-          </div>
-          <ul>
-            <li>Built regression models to forecast a $100M labor budget, improving accuracy of workforce planning.</li>
-            <li>Automated recurring reporting processes, saving 20+ hours/month.</li>
-            <li>Introduced standardized SQL views that reduced reporting errors by 95% across multiple platforms.</li>
-          </ul>
-        </article>
-        <article class="experience-item">
-          <div class="rolebar">
-            <div>
-              <span class="position">Junior Business Analyst</span> · <span class="company">Indus Valley Partners</span>
-            </div>
-            <div class="duration">Salt Lake City, UT · May 2016 – Sept 2017</div>
-          </div>
-          <ul>
-            <li>Gathered client requirements and developed enterprise databases supporting compliance and regulatory reporting.</li>
-          </ul>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="skills-section">
-      <div class="container">
-        <h2 class="section-title">Core Leadership &amp; Technical Skills</h2>
-        <div class="skills-grid">
-          <span class="chip">BI Roadmaps</span>
-          <span class="chip">Team Management</span>
-          <span class="chip">Cross-Functional Collaboration</span>
-          <span class="chip">KPI Design</span>
-          <span class="chip">Forecasting</span>
-          <span class="chip">Change Management</span>
-          <span class="chip">Looker (Advanced LookML)</span>
-          <span class="chip">SQL</span>
-          <span class="chip">ETL / Data Warehousing</span>
-          <span class="chip">Data Modeling</span>
-          <span class="chip">AI-driven Coding</span>
-          <span class="chip">Employee Training</span>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="projects-section">
-      <div class="container">
-        <h2 class="section-title">Selected Projects</h2>
-        <div class="projects-grid">
-          <div class="project-card">
-            <h3>Operations Execution Score</h3>
-            <p>Designed a holistic performance metric used at 800+ locations to drive accountability and improve operational consistency by 10%.</p>
-          </div>
-          <div class="project-card">
-            <h3>Production &amp; Waste Dashboards</h3>
-            <p>Developed category dashboards that unlocked a 9% YoY increase in sales by improving labor and inventory efficiency.</p>
-          </div>
-          <div class="project-card">
-            <h3>Automation of Bonus Program</h3>
-            <p>Eliminated manual administration for 2,400 employees; delivered $100K/year in cost savings with an automated reporting and payout system.</p>
-          </div>
-          <div class="project-card">
-            <h3>BI Tool Consolidation</h3>
-            <p>Retired four legacy BI platforms, saving $275K/year and increasing adoption through centralization in Looker.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="contact-section">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <div class="contact-info">
-          <span>📧 <a href="mailto:Preston.aa.Keeling@Gmail.com">Preston.aa.Keeling@Gmail.com</a></span>
-          <span>📱 <a href="tel:+18016388101">(801) 638‑8101</a></span>
-          <span>💼 <a href="https://www.linkedin.com/in/prestonkeeling/" target="_blank">LinkedIn</a></span>
-        </div>
+    <!-- Contact -->
+    <section>
+      <h2 class="section-title">Contact</h2>
+      <div class="contact-info">
+        <span>📧 <a href="mailto:Preston.aa.Keeling@Gmail.com">Email</a></span>
+        <span>📱 <a href="tel:+18016388101">Call</a></span>
+        <span>💼 <a href="https://www.linkedin.com/in/prestonkeeling/" target="_blank">LinkedIn</a></span>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2025 Preston Keeling. All rights reserved.</p>
-    </div>
+    &copy; 2025 Preston Keeling
   </footer>
 </body>
 </html>
