@@ -1,18 +1,16 @@
 :root {
-    --ash-gray: #cad2c5ff;
-    --cambridge-blue: #84a98cff;
-    --hookers-green: #52796fff;
-    --dark-slate-gray: #354f52ff;
-    --charcoal: #2f3e46ff;
-    --background-color: var(--ash-gray);
-    --surface-color: var(--cambridge-blue);
-    --surface-variant: var(--ash-gray);
-    --accent-color: var(--hookers-green);
-    --accent-hover: var(--dark-slate-gray);
-    --text-primary: var(--charcoal);
-    --text-secondary: var(--dark-slate-gray);
-    --text-muted: var(--cambridge-blue);
-    --border-color: var(--dark-slate-gray);
+    --primary-navy: #1e2a38;
+    --accent-blue: #1976d2;
+    --accent-silver: #b0bec5;
+    --background-color: #f7fafc;
+    --surface-color: #ffffff;
+    --surface-variant: #b0bec5;
+    --accent-color: #1976d2;
+    --accent-hover: #1560aa;
+    --text-primary: #151a21;
+    --text-secondary: #1e2a38;
+    --text-muted: #6c7580;
+    --border-color: #b0bec5;
     --success-color: #009473;
     --warning-color: #ffa500;
     
@@ -227,7 +225,7 @@ section {
 
 .experience-item:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(82, 121, 111, 0.1);
+    box-shadow: 0 10px 30px rgba(25, 118, 210, 0.1);
 }
 
 .experience-header {
@@ -339,7 +337,7 @@ section {
 
 .skill-pill:hover {
     transform: scale(1.05) translateY(-2px);
-    box-shadow: 0 5px 15px rgba(82, 121, 111, 0.3);
+    box-shadow: 0 5px 15px rgba(25, 118, 210, 0.3);
 }
 
 .skill-pill.primary:hover {
@@ -369,7 +367,7 @@ section {
 
 .project-card:hover {
     transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 15px 40px rgba(82, 121, 111, 0.15);
+    box-shadow: 0 15px 40px rgba(25, 118, 210, 0.15);
     border-color: var(--accent-color);
 }
 
@@ -514,7 +512,7 @@ section {
 .cta-button:hover {
     background: var(--accent-hover);
     transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 10px 25px rgba(82, 121, 111, 0.3);
+    box-shadow: 0 10px 25px rgba(25, 118, 210, 0.3);
 }
 
 .site-footer {
