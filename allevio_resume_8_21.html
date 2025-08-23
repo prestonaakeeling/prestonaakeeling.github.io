@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Preston Keeling — Resume</title>
+  <style>
+    :root {
+      --ink: #111827;
+      --sub: #374151;
+      --muted: #6b7280;
+      --rule: #e5e7eb;
+      --accent: #0ea5e9;
+    }
+    html, body { height: 100%; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      font: 12pt/1.35 "Inter", system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      -webkit-font-smoothing: antialiased;
+      background: #fff;
+      print-color-adjust: exact;
+      -webkit-print-color-adjust: exact;
+    }
+    @page { size: A4; margin: 0.33in; }
+    @media print {
+      .toolbar { display: none !important; }
+      a { color: inherit; text-decoration: none; }
+      .avoid-break { break-inside: avoid; page-break-inside: avoid; }
+      h2 { break-after: avoid; }
+    }
+    .sheet {
+      max-width: 8.5in;
+      margin: 0 auto;
+      padding: 0.27in;
+      box-sizing: border-box;
+    }
+    header {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 8px 24px;
+      align-items: end;
+      border-bottom: 2px solid var(--rule);
+      padding-bottom: 12px;
+      margin-bottom: 16px;
+    }
+    .name { font-size: 22pt; font-weight: 800; letter-spacing: .2px; }
+    .title { font-size: 12pt; color: var(--sub); font-weight: 600; }
+    .contact { font-size: 10.5pt; color: var(--muted); }
+    .contact a { color: var(--accent); text-decoration: none; }
+    h2 { font-size: 11.5pt; letter-spacing: .4px; text-transform: uppercase; color: var(--sub); margin: 14px 0 8px; border-bottom: 1px solid var(--rule); padding-bottom: 4px; }
+    p { margin: 0 0 8px; }
+    ul { margin: 6px 0 0 18px; padding: 0; }
+    li { margin: 4px 0; }
+    .role { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; align-items: baseline; margin-bottom: 2px; }
+    .role .position { font-weight: 700; }
+    .role .company { color: var(--sub); font-weight: 600; }
+    .meta { color: var(--muted); font-size: 10.5pt; }
+    .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; }
+    .chip { border: 1px solid var(--rule); padding: 2px 8px; border-radius: 999px; font-size: 9.5pt; }
+    .toolbar { position: sticky; top: 0; background: #fff; border-bottom: 1px solid var(--rule); padding: 8px 12px; display: flex; gap: 8px; justify-content: flex-end; }
+    .toolbar button { border: 1px solid var(--rule); background: #fff; padding: 6px 10px; border-radius: 8px; cursor: pointer; font-size: 10pt; }
+    .toolbar button:hover { border-color: var(--accent); }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <button onclick="window.print()">Print / Save as PDF</button>
+  </div>
+  <main class="sheet">
+    <header>
+      <div>
+        <div class="name">Preston Keeling</div>
+        <div class="title">Business Intelligence Leader (Director/Manager)</div>
+      </div>
+      <div class="contact">
+        Lehi, UT · <a href="mailto:Preston.AA.Keeling@Gmail.com">Preston.aa.Keeling@Gmail.com</a> · (801) 638‑8101 · <a href="https://www.linkedin.com/in/prestonkeeling/">LinkedIn</a>
+      </div>
+    </header>
+    <section class="avoid-break">
+      <h2>Profile</h2>
+      <p>
+        BI Manager with 8+ years of experience delivering measurable business impact through analytics strategy, team leadership, and enterprise BI adoption. Proven record of driving revenue growth, cost savings, and operational improvements by aligning data with business goals. Skilled in building high-performing teams, leading cross-functional initiatives, and scaling BI solutions across 1,300+ users and 500 dashboards.
+      </p>
+    </section>
+    <section>
+      <h2>Professional Experience</h2>
+      <article class="avoid-break">
+        <div class="role">
+          <div>
+            <span class="position"><strong>Business Intelligence Manager</strong></span> · <span class="company">Maverik</span>
+          </div>
+          <div class="meta">Salt Lake City, UT · Oct 2021 – Present</div>
+        </div>
+        <ul>
+          <li>Designed an “operations execution score” system—simplifying complex KPIs into actionable insights that improved site-level compliance and performance, a scalable approach applicable to clinical or patient-facing metrics.</li>
+          <li>Improved efficiency and reduced resource waste by implementing real-time production and inventory dashboards—demonstrating a measurable approach to process enhancement, cost savings, and regulatory compliance.</li>
+          <li>Led the consolidation of legacy analytics tools into a secure, modern BI platform, incorporating data privacy and security best practices relevant in regulated settings such as healthcare.</li>
+          <li>Automated workforce bonus programs impacting 2,400+ employees, ensuring accuracy, equity, and auditability; experience transferable to incentive programs in healthcare organizations.</li>
+          <li>Managed BI access and insights for 1,300+ users and 500 dashboards, facilitating compliance with data controls and supporting data-driven leadership—critical for clinical and non-clinical operations.</li>
+          <li>Implemented SCRUM and dashboard/code quality standards to enhance project delivery and data reliability, aligning with clinical governance or healthcare IT best practices.</li>
+        </ul>
+      </article>
+      <article class="avoid-break">
+        <div class="role">
+          <div>
+            <span class="position"><strong>Senior Financial Analyst</strong></span> · <span class="company">Maverik</span>
+          </div>
+          <div class="meta">Salt Lake City, UT · Feb 2020 – Oct 2021</div>
+        </div>
+        <ul>
+          <li>Managed and developed a team of junior analysts; trained staff in SQL, data modeling, and reporting best practices with a focus on maintaining data quality and supporting future regulatory reporting needs.</li>
+          <li>Designed KPI dashboards for 50+ leaders across Operations and Finance, improving visibility and accountability.</li>
+        </ul>
+      </article>
+      <article class="avoid-break">
+        <div class="role">
+          <div>
+            <span class="position"><strong>Financial Analyst I &amp; II</strong></span> · <span class="company">Maverik</span>
+          </div>
+          <div class="meta">Salt Lake City, UT · Sept 2017 – Feb 2020</div>
+        </div>
+        <ul>
+          <li>Built regression models to forecast a $100M labor budget, improving accuracy of workforce planning.</li>
+          <li>Automated recurring reporting processes, saving 20+ hours/month.</li>
+          <li>Standardized SQL views, reducing reporting errors by 95%, and improving integrity and audit trails—essential for healthcare compliance and reporting.</li>
+        </ul>
+      </article>
+      <article class="avoid-break">
+        <div class="role">
+          <div>
+            <span class="position"><strong>Junior Business Analyst</strong></span> · <span class="company">Indus Valley Partners</span>
+          </div>
+          <div class="meta">Salt Lake City, UT · May 2016 – Sept 2017</div>
+        </div>
+        <ul>
+          <li>Gathered client requirements and developed enterprise databases supporting compliance and regulatory reporting.</li>
+        </ul>
+      </article>
+    </section>
+    <section class="avoid-break">
+      <h2>Core Leadership &amp; Technical Skills</h2>
+      <div class="chips">
+        <span class="chip">BI Roadmaps</span>
+        <span class="chip">Team Management</span>
+        <span class="chip">Cross-Functional Collaboration</span>
+        <span class="chip">KPI Design</span>
+        <span class="chip">Forecasting</span>
+        <span class="chip">Change Management</span>
+        <span class="chip">Looker (Advanced LookML)</span>
+        <span class="chip">SQL</span>
+        <span class="chip">ETL / Data Warehousing</span>
+        <span class="chip">Data Modeling</span>
+        <span class="chip">AI-driven Coding</span>
+        <span class="chip">Employee Training</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
+
